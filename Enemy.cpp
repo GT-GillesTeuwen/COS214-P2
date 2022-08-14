@@ -10,7 +10,7 @@ Enemy::Enemy(int hp, std::string attackMove, int attackDamage, std::string defen
 }
 
 void Enemy::attack(SquadMember* squadMember) {
-	while (squadMember->getHp()>0)
+	while (squadMember->getHp()>0 && HP>0)
 	{
 		if (hitSquadMember(squadMember))
 		{

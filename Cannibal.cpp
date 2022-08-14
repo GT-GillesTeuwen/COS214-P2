@@ -23,7 +23,7 @@ void Cannibal::celebrate(){
  }
 
  void Cannibal::die(){
-	std::cout<<"Screams with his last breath, \"I am your father \"."<<std::endl;
+	std::cout<<"Screams with his last breath, \"I am your father\"."<<std::endl;
  }
 
  bool Cannibal::hitSquadMember(SquadMember* z){
