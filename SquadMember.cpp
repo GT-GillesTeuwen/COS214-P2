@@ -1,11 +1,16 @@
 #include "SquadMember.h"
+#include <iostream>
+
+SquadMember::SquadMember(std::string name) {
+	this->name=name;
+}
 
 SquadMember* SquadMember::clone() {
 	// TODO - implement SquadMember::clone
 	throw "Not yet implemented";
 }
 
-string SquadMember::getName() {
+std::string SquadMember::getName() {
 	return this->name;
 }
 
@@ -23,4 +28,15 @@ void SquadMember::setHp(int newHp) {
 
 void SquadMember::setDamage(int newDamage) {
 	this->damage = newDamage;
+}
+
+int SquadMember::takeDamage(int damageDone){
+	if (hp-damageDone<=0)
+	{
+		hp=0;
+		return hp;
+	}
+
+	hp-=damageDone;
+	return hp;
 }

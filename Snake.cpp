@@ -8,7 +8,7 @@ Snake::Snake(int hp, std::string attackMove, int attackDamage, std::string defen
  }
 
  bool Snake::getHit(SquadMember *z){
-	std::cout<<"Slithers rapidly searching forsafety and employs "<< defensiveMove<<"."<<std::endl;
+	std::cout<<"Slithers rapidly searching for safety and employs "<< defensiveMove<<"."<<std::endl;
 	if (HP-(z->getDamage())<=0)
 	{
 		HP=0;

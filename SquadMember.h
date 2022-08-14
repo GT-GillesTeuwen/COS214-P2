@@ -5,6 +5,9 @@
 
 class SquadMember {
 public:
+
+	SquadMember(std::string name);
+
 	SquadMember* clone();
 
 	std::string getName();
