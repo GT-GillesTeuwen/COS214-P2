@@ -1,17 +1,21 @@
 #ifndef ENEMYFACTORY_H
 #define ENEMYFACTORY_H
 
-class EnemyFactory {
+#include <string>
+#include "Enemy.h"
 
+class EnemyFactory
+{
 
 public:
-	void SnakeFactory();
+	EnemyFactory();
 
-	virtual void ~EnemyFactory() = 0;
+	virtual ~EnemyFactory();
 
-	virtual Enemy* createEnemy(string attack, string defence) = 0;
+	virtual Enemy* createEnemy(std::string attack, std::string defence) = 0;
 
-	string getName();
+protected:
+	std::string getName();
 };
 
 #endif
