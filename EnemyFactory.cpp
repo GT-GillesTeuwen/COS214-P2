@@ -3,7 +3,10 @@
 #include <cstdlib>
 
 EnemyFactory::EnemyFactory() {
-	srand(time(NULL));
+	
+}
+
+EnemyFactory::~EnemyFactory() {
 }
 
 std::string EnemyFactory::getName() {

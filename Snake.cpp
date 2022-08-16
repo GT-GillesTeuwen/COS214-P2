@@ -1,4 +1,5 @@
 #include "Snake.h"
+#include "EnemyState.h"
 #include <iostream>
 
 Snake::Snake(int hp, std::string attackMove, int attackDamage, std::string defensiveMove):Enemy( hp, attackMove, attackDamage,defensiveMove){}
@@ -33,4 +34,8 @@ Snake::Snake(int hp, std::string attackMove, int attackDamage, std::string defen
 
 	return false;	
 	
+ }
+
+ EnemyState* Snake::saveState(){
+	return new EnemyState(HP,attackMove,attackDamage,defensiveMove,0);
  }

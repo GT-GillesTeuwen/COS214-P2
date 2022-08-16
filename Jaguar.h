@@ -2,6 +2,7 @@
 #define JAGUAR_H
 
 #include "Enemy.h"
+#include "EnemyState.h"
 
 class Jaguar : public Enemy {
 
@@ -16,6 +17,8 @@ public:
 	virtual void die();
 
 	virtual bool hitSquadMember(SquadMember* z);
+	virtual EnemyState* saveState();
+	
 };
 
 #endif

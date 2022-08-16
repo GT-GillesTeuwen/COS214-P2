@@ -2,13 +2,14 @@
 #define SQUADMEMBER_H
 
 #include<string>
+#include"SquadState.h"
 
 class SquadMember {
 public:
 
 	SquadMember(std::string name);
 
-	SquadMember* clone();
+	SquadMember* clone(std::string name);
 
 	std::string getName();
 
@@ -21,6 +22,8 @@ public:
 	void setDamage(int newDamage);
 
 	int takeDamage(int damageDone);
+
+	SquadMemberState* saveState();
 private:
 	int hp;
 	int damage;

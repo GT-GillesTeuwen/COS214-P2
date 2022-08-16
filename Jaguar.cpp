@@ -1,4 +1,5 @@
 #include "Jaguar.h"
+#include"EnemyState.h"
 #include <iostream>
 
 Jaguar::Jaguar(int hp, std::string attackMove, int attackDamage, std::string defensiveMove):Enemy( hp, attackMove, attackDamage,defensiveMove) {
@@ -35,4 +36,8 @@ void Jaguar::celebrate(){
 
 	return false;	
 	
+ }
+
+ EnemyState* Jaguar::saveState(){
+	return new EnemyState(HP,attackMove,attackDamage,defensiveMove,1);
  }

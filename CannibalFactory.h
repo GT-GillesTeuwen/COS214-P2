@@ -1,13 +1,15 @@
 #ifndef CANNIBALFACTORY_H
 #define CANNIBALFACTORY_H
 
-class CannibalFactory : EnemyFactory {
+#include "EnemyFactory.h"
+
+class CannibalFactory : public EnemyFactory {
 
 
 public:
 	CannibalFactory();
 
-	virtual Enemy* createEnemy(string attack, string defence) = 0;
+	virtual Enemy* createEnemy(std::string attack, std::string defence);
 };
 
 #endif

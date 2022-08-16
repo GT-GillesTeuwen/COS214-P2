@@ -10,8 +10,9 @@ Enemy::Enemy(int hp, std::string attackMove, int attackDamage, std::string defen
 }
 
 void Enemy::attack(SquadMember* squadMember) {
+	std::cout<<squadMember->getName()<<"("<<squadMember->getHp()<<") is fighting"<<std::endl;
 	while (squadMember->getHp()>0 && HP>0)
-	{
+	{		
 		if (hitSquadMember(squadMember))
 		{
 			std::cout<<squadMember->getName()<<" died"<<std::endl;
@@ -26,4 +27,8 @@ void Enemy::attack(SquadMember* squadMember) {
 		
 	}
 	
+}
+
+int Enemy::getHealth(){
+	return this->HP;
 }

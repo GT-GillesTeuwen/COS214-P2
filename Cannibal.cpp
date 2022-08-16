@@ -1,4 +1,5 @@
 #include "Cannibal.h"
+#include"EnemyState.h"
 #include <iostream>
 
 Cannibal::Cannibal(int hp, std::string attackMove, int attackDamage, std::string defensiveMove):Enemy( hp, attackMove, attackDamage,defensiveMove) {
@@ -35,4 +36,8 @@ void Cannibal::celebrate(){
 
 	return false;	
 	
+ }
+
+  EnemyState* Cannibal::saveState(){
+	return new EnemyState(HP,attackMove,attackDamage,defensiveMove,3);
  }

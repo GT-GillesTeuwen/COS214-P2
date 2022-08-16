@@ -2,6 +2,7 @@
 #define SNAKE_H
 
 #include "Enemy.h"
+#include "EnemyState.h"
 
 class Snake : public Enemy {
 
@@ -16,6 +17,7 @@ public:
 	virtual void die();
 	
 	virtual bool hitSquadMember(SquadMember* z);
+	virtual EnemyState* saveState();
 };
 
 #endif

@@ -1,13 +1,20 @@
 #include "SquadMember.h"
+#include "SquadMemberState.h"
 #include <iostream>
 
 SquadMember::SquadMember(std::string name) {
 	this->name=name;
 }
 
-SquadMember* SquadMember::clone() {
-	// TODO - implement SquadMember::clone
-	throw "Not yet implemented";
+SquadMember* SquadMember::clone(std::string name) {
+	SquadMember* theClone= new SquadMember(name);
+	theClone->setDamage(this->getDamage());
+	theClone->setHp(this->getHp());
+	return theClone;
+}
+
+SquadMemberState* SquadMember::saveState(){
+	return new SquadMemberState(hp,damage,name);
 }
 
 std::string SquadMember::getName() {

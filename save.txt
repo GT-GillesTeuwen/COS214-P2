@@ -1,0 +1,25 @@
+1,5,0
+10
+20,1,The OG Soldier
+20,1,Soldier_0
+0,1,Soldier_1
+20,1,Soldier_2
+20,1,Soldier_3
+20,1,Soldier_4
+20,1,Soldier_5
+0,1,Soldier_6
+20,1,Soldier_7
+16,1,Soldier_8
+Arena 0,0,0,0
+Arena 1,0,0,3
+5,weapon,2,defence,0
+15,weapon,4,defence,1
+5,weapon,1,defence,2
+Arena 2,0,0,1
+5,weapon,4,defence,1
+Arena 3,0,0,2
+5,weapon,2,defence,0
+6,weapon,2,defence,0
+Arena 4,0,1,2
+9,weapon,1,defence,2
+5,weapon,1,defence,2
