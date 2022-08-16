@@ -8,7 +8,7 @@ class Snake : public Enemy {
 
 
 public:
-	Snake(int hp, std::string attackMove, int attackDamage, std::string defensiveMove);
+	Snake(int hp, std::string attackMove, int attackDamage, std::string defensiveMove,std::string name);
 
 	virtual void celebrate();
 

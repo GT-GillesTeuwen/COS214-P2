@@ -15,6 +15,6 @@ Enemy* CannibalFactory::createEnemy(std::string attack, std::string defence) {
 	{	
 		health=round(d(gen));
 	}
-	Enemy* createdCannibal=new Cannibal(health,attack,6,defence);
+	Enemy* createdCannibal=new Cannibal(health,attack,6,defence,getName());
 	return createdCannibal;
 }

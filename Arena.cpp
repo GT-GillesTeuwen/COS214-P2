@@ -114,19 +114,19 @@ void Arena::initArena(std::vector<EnemyState *> stateOftroops)
     {
         if (stateOftroops.at(i)->type == 0)
         {
-            troops.push_back(new Snake(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence));
+            troops.push_back(new Snake(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence,"_"+std::to_string(i)));
         }
         else if (stateOftroops.at(i)->type == 1)
         {
-            troops.push_back(new Jaguar(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence));
+            troops.push_back(new Jaguar(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence,"_"+std::to_string(i)));
         }
         else if (stateOftroops.at(i)->type == 2)
         {
-            troops.push_back(new Gorilla(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence));
+            troops.push_back(new Gorilla(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence,"_"+std::to_string(i)));
         }
         else if (stateOftroops.at(i)->type == 3)
         {
-            troops.push_back(new Cannibal(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence));
+            troops.push_back(new Cannibal(stateOftroops.at(i)->health, stateOftroops.at(i)->weapon, stateOftroops.at(i)->damage, stateOftroops.at(i)->defence,"_"+std::to_string(i)));
         }
     }
 }
@@ -156,6 +156,7 @@ int Arena::fight(std::vector<SquadMember *> team, int &numkeys)
     }
 
     clearArena();
+    int ret=difficulty;
     this->difficulty=0;
     std::cout << "Level " << difficulty << " arena conquered" << std::endl;
     if (hasKey)
@@ -164,7 +165,7 @@ int Arena::fight(std::vector<SquadMember *> team, int &numkeys)
         numkeys++;
     }
 
-    return difficulty;
+    return ret;
 }
 
 std::string Arena::getName()

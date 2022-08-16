@@ -8,7 +8,7 @@ class Gorilla : public Enemy {
 
 
 public:
-	Gorilla(int hp, std::string attackMove, int attackDamage, std::string defensiveMove);
+	Gorilla(int hp, std::string attackMove, int attackDamage, std::string defensiveMove,std::string name);
 
 	virtual void celebrate();
 

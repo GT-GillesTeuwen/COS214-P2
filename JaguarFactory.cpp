@@ -14,6 +14,6 @@ Enemy* JaguarFactory::createEnemy(std::string attack, std::string defence) {
 	{
 		health=round(d(gen));
 	}
-	Enemy* createdJaguar=new Jaguar(health,attack,4,defence);
+	Enemy* createdJaguar=new Jaguar(health,attack,4,defence,getName());
 	return createdJaguar;
 }

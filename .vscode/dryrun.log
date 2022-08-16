@@ -21,7 +21,6 @@ g++ -c ArenaState.cpp
 g++ -c AdventureSave.cpp
 g++ -c AdventureSaveManager.cpp
 g++ -o main AdventureSaveManager.o AdventureSave.o ArenaState.o SquadMemberState.o SquadState.o EnemyState.o Enemy.o Snake.o Jaguar.o Gorilla.o Cannibal.o EnemyFactory.o SnakeFactory.o JaguarFactory.o GorillaFactory.o CannibalFactory.o SquadMember.o AdventureIsland.o Arena.o main.o
- 
 ./main
 rm *.o
 make: Leaving directory '/mnt/c/Users/gteuw/Desktop/UNI/Year2/Semester 2/COS 214/Prac2/COS214-P2'

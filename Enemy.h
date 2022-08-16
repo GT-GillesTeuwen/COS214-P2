@@ -9,7 +9,7 @@ class Enemy
 {
 
 public:
-	Enemy(int hp, std::string attackMove, int attackDamage, std::string defensiveMove);
+	Enemy(int hp, std::string attackMove, int attackDamage, std::string defensiveMove,std::string name);
 
 	void attack(SquadMember *squadMember);
 

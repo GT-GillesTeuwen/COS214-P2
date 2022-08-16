@@ -95,7 +95,7 @@ void testTask1()
     sq->setDamage(1);
 
     startTest("Snake functions");
-    Enemy *s = new Snake(2, "venom", 2, "curl up");
+    Enemy *s = new Snake(2, "venom", 2, "curl up","test");
     s->celebrate();
     assertEquals<bool>(s->getHit(sq), false);
     assertEquals<bool>(s->hitSquadMember(sq), false);
@@ -119,10 +119,10 @@ void testTask1()
     startTest("Enemy array");
     sq->setHp(10);
     Enemy **gang = new Enemy *[4];
-    gang[0] = new Snake(2, "venom", 2, "curl up");
-    gang[1] = new Jaguar(2, "bite", 2, "growl");
-    gang[2] = new Gorilla(2, "pound", 2, "hands up");
-    gang[3] = new Cannibal(2, "spear", 2, "shield wall");
+    gang[0] = new Snake(2, "venom", 2, "curl up","test");
+    gang[1] = new Jaguar(2, "bite", 2, "growl","test");
+    gang[2] = new Gorilla(2, "pound", 2, "hands up","test");
+    gang[3] = new Cannibal(2, "spear", 2, "shield wall","test");
 
     for (int i = 0; i < 4; i++)
     {
@@ -145,12 +145,12 @@ void testTask1()
     }
 
     startTest("Cannibal Attack");
-    Enemy *e1 = new Cannibal(5, "stick", 2, "shriek");
+    Enemy *e1 = new Cannibal(5, "stick", 2, "shriek","test");
     sq->setHp(5);
     e1->attack(sq);
 
     startTest("Jaguar Attack");
-    Enemy *e2 = new Jaguar(5, "claw", 4, "hiss");
+    Enemy *e2 = new Jaguar(5, "claw", 4, "hiss","test");
     sq->setHp(50);
     e2->attack(sq);
 
@@ -177,10 +177,7 @@ void testTask2()
     testFactory("C");
 }
 
-int main()
-{
-    // testTask1();
-     testTask2();
+void runGame(){
     AdventureSaveManager *manager = new AdventureSaveManager();
     AdventureIsland *adventure;
     std::string load;
@@ -211,5 +208,12 @@ int main()
     }
     delete adventure;
     delete manager;
+}
+
+int main()
+{
+    //testTask1();
+    //testTask2();
+    runGame();
     return 0;
 }

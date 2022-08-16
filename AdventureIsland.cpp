@@ -59,6 +59,7 @@ AdventureIsland::AdventureIsland(AdventureSave *oldAdventure)
 
     this->numRooms = oldAdventure->numRooms;
     this->ttlKeys = oldAdventure->ttlKeys;
+    this->numCleared=oldAdventure->numCleared;
     for (int i = 0; i < numRooms; i++)
     {
 
@@ -99,6 +100,7 @@ void AdventureIsland::playLoop(bool &over)
     {
         std::cout << "\nPlayer Turn";
         std::cout << "\nKeys: " << ttlKeys << std::endl;
+        std::cout << "Cleared: " << numCleared << std::endl;
         listRooms();
         int chosen = chooseRoom();
         if (layout.at(chosen)->tryEnter(ttlKeys))

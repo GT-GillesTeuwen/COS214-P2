@@ -8,7 +8,7 @@ class Jaguar : public Enemy {
 
 
 public:
-	Jaguar(int hp, std::string attackMove, int attackDamage, std::string defensiveMove);
+	Jaguar(int hp, std::string attackMove, int attackDamage, std::string defensiveMove,std::string name);
 
 	virtual void celebrate();
 

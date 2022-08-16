@@ -2,7 +2,7 @@
 #include "EnemyState.h"
 #include <iostream>
 
-Snake::Snake(int hp, std::string attackMove, int attackDamage, std::string defensiveMove):Enemy( hp, attackMove, attackDamage,defensiveMove){}
+Snake::Snake(int hp, std::string attackMove, int attackDamage, std::string defensiveMove,std::string name):Enemy( hp, attackMove, attackDamage,defensiveMove,name){}
 
  void Snake::celebrate(){
 	std::cout<<"Player tried strongly till the end."<<std::endl;

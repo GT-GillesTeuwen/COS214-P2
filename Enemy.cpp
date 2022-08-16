@@ -2,11 +2,12 @@
 #include <string>
 #include <iostream>
 
-Enemy::Enemy(int hp, std::string attackMove, int attackDamage, std::string defensiveMove) {
+Enemy::Enemy(int hp, std::string attackMove, int attackDamage, std::string defensiveMove,std::string name) {
 	this->HP=hp;
 	this->attackMove=attackMove;
 	this->attackDamage=attackDamage;
 	this->defensiveMove=defensiveMove;
+	this->name=name;
 }
 
 void Enemy::attack(SquadMember* squadMember) {

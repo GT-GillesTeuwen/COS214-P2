@@ -15,7 +15,7 @@ Enemy* GorillaFactory::createEnemy(std::string attack, std::string defence) {
 	{	
 		health=round(d(gen));
 	}
-	Enemy* createdGorilla=new Gorilla(health,attack,1,defence);
+	Enemy* createdGorilla=new Gorilla(health,attack,1,defence,getName());
 	return createdGorilla;
 }
 

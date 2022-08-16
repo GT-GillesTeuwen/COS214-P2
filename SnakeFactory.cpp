@@ -19,6 +19,6 @@ Enemy* SnakeFactory::createEnemy(std::string attack, std::string defence) {
 	{	
 		health=round(d(gen));
 	}
-	Enemy* createdSnake=new Snake(health,attack,2,defence);
+	Enemy* createdSnake=new Snake(health,attack,2,defence,getName());
 	return createdSnake;
 }

@@ -8,7 +8,7 @@ class Cannibal : public Enemy {
 
 
 public:
-	Cannibal(int hp, std::string attackMove, int attackDamage, std::string defensiveMove);
+	Cannibal(int hp, std::string attackMove, int attackDamage, std::string defensiveMove,std::string name);
 
 	virtual void celebrate();
 
